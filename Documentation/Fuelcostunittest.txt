@@ -1,0 +1,31 @@
+------------------------------Request----------------------------------------
+This request returns the rate of fuel for city entered in text box to angular front end.
+
+GET  (In Node.Js)
+http://localhost:8081/sselect?city=Bangalore  
+
+-----------------------------Response------------------------------
+{
+    "city": "Bangalore",
+    "rate": 95
+}
+
+---------------- -------------Request-----------------------------
+This request calculates price of fuel using the fuel lid time and rate for that particular city and returns the calculated price to angular front end.
+
+POST(In Spring Boot)
+http://localhost:8888/Calprice  
+{
+            "fuellid" :"false",
+            "city"   : "Bangalore",
+	         "rate"  : 95.0,
+             "secs" : 46
+        }
+          
+-------------------------------Response to angular------------------------------------------
+{
+    "city": "Bangalore",
+    "totalprice": 95
+}
+
+
